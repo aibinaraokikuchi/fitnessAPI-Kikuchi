@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const cors = require("cors");
+const cors = require("cors");
 
 
 //Routes Middleware
@@ -15,14 +15,14 @@ const app = express();
 
 app.use(express.json());
 
-// const corsOptions = {
+const corsOptions = {
 
-// 	origin: ['http://localhost:8000', 'http://localhost:5173'],
-// 	credentials: true,
-// 	optionsSuccessStatus: 200
-// };
+	origin: ['http://localhost:8000', 'http://localhost:5173'],
+	credentials: true,
+	optionsSuccessStatus: 200
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGODB_STRING);
 
