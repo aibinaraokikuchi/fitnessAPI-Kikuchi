@@ -17,7 +17,7 @@ app.use(express.json());
 
 const corsOptions = {
 
-	origin: ['http://localhost:8000', 'http://localhost:5173'],
+	origin: ['http://localhost:8000', 'http://localhost:5173', 'https://fitness-app-client-git-main-ais-projects-ff96a4d5.vercel.app/'],
 	credentials: true,
 	optionsSuccessStatus: 200
 };
